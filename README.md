@@ -2,6 +2,7 @@
 
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/232a8tadrrn8jv0k/branch/master?svg=true)](https://ci.appveyor.com/project/cgutman/moonlight-android/branch/master)
 [![Translation Status](https://hosted.weblate.org/widgets/moonlight/-/moonlight-android/svg-badge.svg)](https://hosted.weblate.org/projects/moonlight/moonlight-android/)
+[![follow us](http://pub.idqqimg.com/wpa/images/group.png '技术讨论群')](https://qm.qq.com/cgi-bin/qm/qr?k=NTCPcYeTZWcqM_VFRtAxRaJFHYUC2UWp&jump_from=webapi)
 
 [Moonlight for Android](https://moonlight-stream.org) is an open source client for NVIDIA GameStream, as used by the NVIDIA Shield.
 
