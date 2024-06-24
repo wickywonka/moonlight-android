@@ -580,27 +580,7 @@ public class StreamSettings extends Activity {
                 category.removePreference(findPreference("checkbox_enable_hdr"));
             }
             else {
-                Display.HdrCapabilities hdrCaps = display.getHdrCapabilities();
-
-                // We must now ensure our display is compatible with HDR10
-                boolean foundHdr10 = false;
-                if (hdrCaps != null) {
-                    // getHdrCapabilities() returns null on Lenovo Lenovo Mirage Solo (vega), Android 8.0
-                    for (int hdrType : hdrCaps.getSupportedHdrTypes()) {
-                        if (hdrType == Display.HdrCapabilities.HDR_TYPE_HDR10) {
-                            foundHdr10 = true;
-                            break;
-                        }
-                    }
-                }
-
-                if (!foundHdr10) {
-                    LimeLog.info("Excluding HDR toggle based on display capabilities");
-                    PreferenceCategory category =
-                            (PreferenceCategory) findPreference("category_advanced_settings");
-                    category.removePreference(findPreference("checkbox_enable_hdr"));
-                }
-                else if (PreferenceConfiguration.isShieldAtvFirmwareWithBrokenHdr()) {
+                 if (PreferenceConfiguration.isShieldAtvFirmwareWithBrokenHdr()) {
                     LimeLog.info("Disabling HDR toggle on old broken SHIELD TV firmware");
                     PreferenceCategory category =
                             (PreferenceCategory) findPreference("category_advanced_settings");

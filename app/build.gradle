@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    ndkVersion "25.2.9519653"
-
+    ndkVersion "26.2.11394342"
     compileSdk 34
+
 
     namespace 'com.limelight'
 
@@ -125,6 +125,7 @@ android {
 
             minifyEnabled true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug
         }
     }
 
